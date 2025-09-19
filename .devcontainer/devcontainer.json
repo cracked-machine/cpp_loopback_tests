@@ -1,0 +1,23 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+    "name": "C++ General",
+    "build": { "dockerfile": "Dockerfile" },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "llvm-vs-code-extensions.vscode-clangd",
+                "ms-vscode.cpptools",
+                "twxs.cmake",
+                "xaver.clang-format",
+                "ms-vscode.hexeditor",
+                "cschlosser.doxdocgen"
+
+            ]
+        }
+    },
+    "remoteUser": "user",
+    "containerUser": "user"
+    
+    
+}

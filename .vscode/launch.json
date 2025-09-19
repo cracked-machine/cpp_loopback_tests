@@ -1,0 +1,36 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+    ///// These are properties used to launch vscode debug on the Windows target
+    ///// E.g. You have cross compiled (mingw) on Linux host for Windows target. 
+    ///// This is for running both binary and vscode debugger IDE on windows target
+    ///// VSCode must be running directly on windows (open this project via samba share)
+    ///// Do not use "remote development" extension
+    /////
+    ///// You will probably need to restart Samba share after each rebuild or you get error from:
+    ///// samba: "The parameter is incorrect" 
+    ///// gdb: "not in executable format: File format not recognized"
+    /////
+    "name": "(gdb) Windows Launch",
+    "type": "cppdbg",
+    "request": "launch",
+    // samba network share path to project and binary 
+    "cwd": "X:\\cpp\\games\\temp\\build\\bin",
+    "program": "X:\\cpp\\games\\temp\\build\\bin\\ProceduralMaze.exe",
+    "MIMode": "gdb",
+    // local target (windows) install of gdb (w64devkit/msys)
+    "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
+    "sourceFileMap":{
+      // maps the host docker source path to samba network share source path
+      "\\workspaces\\games\\celestial_bodies\\src": "X:\\cpp\\games\\temp\\src"
+    }
+
+  }
+
+
+  ]
+}

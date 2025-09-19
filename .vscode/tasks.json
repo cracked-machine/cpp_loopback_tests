@@ -1,0 +1,52 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": [
+                "./scripts/build.sh ${input:BuildType} ${input:BuildArch}"
+            ]
+        },
+        {
+            "label": "List Available CMake Targets",
+            "type": "shell",
+            "command": [
+                "cmake --build build --target help"
+            ]
+        },
+        {
+            "label": "Run clang-format on all source files",
+            "type": "shell",
+            "command": [
+                "find . -not -path './build/*' -regex '.*\\.\\(cpp\\|hpp\\|cc\\|cxx\\)' -exec clang-format -style=file -i {} \\;"
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "BuildType",
+            "type": "pickString",
+            "description": "Select build type",
+            "options": [
+                "Debug",
+                "Release",
+                "RelWithDebInfo",
+                "MinSizeRel"
+            ],
+            "default": "Debug"
+        },
+        {
+            "id": "BuildArch",
+            "type": "pickString",
+            "description": "Select target architecture",
+            "options": [
+                "x86_64-linux-gnu",
+                "x86_64-w64-mingw32"
+            ],
+            "default": "x86_64-linux-gnu"
+        }
+    ]
+}
