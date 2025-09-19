@@ -1,13 +1,12 @@
-# Configuration for clangd
 CompileFlags:
-  # Treat code as C++
-  Add: 
-  # Clangd seems to have trouble finding these paths in the compile_commands.json unless we explicitly add then here?!
-    - "-isystem/workspaces/top-down-maze-procedural/build/_deps/spdlog-src/include"
-    - "-isystem/workspaces/top-down-maze-procedural/build/_deps/sfml-src/include"
-    - "-isystem/workspaces/top-down-maze-procedural/build/_deps/entt-src/src"
-    - "-isystem/workspaces/top-down-maze-procedural/inc"
-    - "-isystem/workspaces/top-down-maze-procedural/inc/Logging"
-  # Prevent -fmodules error
-  Remove: [-m*, -f*]
-  
+  CompilationDatabase: build-x86_64-w64-mingw32
+  Add:
+    - -isystem/workspaces/loopback_tests/build/_deps/spdlog-src/include
+    - -isystem/workspaces/loopback_tests/build/_deps/entt-src/src
+    - -isystem/workspaces/loopback_tests/inc
+    - -isystem/workspaces/loopback_tests/inc/Logging
+  Remove:
+    - -m*
+    - -f*
+Index:
+  Background: Build

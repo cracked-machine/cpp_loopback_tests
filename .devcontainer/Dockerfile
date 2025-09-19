@@ -15,7 +15,9 @@ RUN apt update -y && apt install -y \
     make \
     pkg-config \
     cmake \
-    ninja-build 
+    ninja-build \
+    yq \
+    jq
 
 # optional cross compile to windows    
 RUN apt update -y && apt install -y \
