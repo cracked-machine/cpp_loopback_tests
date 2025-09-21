@@ -13,7 +13,11 @@ elseif(SUBPROJECT STREQUAL "LoopbackPOCO")
 
 elseif(SUBPROJECT STREQUAL "HelloBoost")
     message(STATUS "Configuring HelloBoost project")
-    add_subdirectory(src/HelloBoost)
+    add_subdirectory(src/Boost/HelloBoost)
+
+elseif(SUBPROJECT STREQUAL "LoopbackBoost")
+    message(STATUS "Configuring LoopbackBoost project")
+    add_subdirectory(src/Boost/LoopbackBoost)
 
 elseif(SUBPROJECT STREQUAL "HelloAFXDP")
     message(STATUS "Configuring HelloAFXDP project")

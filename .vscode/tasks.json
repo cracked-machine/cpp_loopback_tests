@@ -65,6 +65,7 @@
                 "HelloPOCO",
                 "LoopbackPOCO",
                 "HelloBoost",
+                "LoopbackBoost",
                 "HelloAFXDP",
                 "HelloDPDK"
             ],
