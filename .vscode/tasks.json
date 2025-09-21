@@ -7,7 +7,7 @@
             "label": "Build",
             "type": "shell",
             "command": [
-                "./scripts/build.sh ${input:BuildType} ${input:BuildArch}"
+                "./scripts/build.sh ${input:BuildType} ${input:BuildArch} ${input:SubProject}"
             ]
         },
         {
@@ -43,10 +43,18 @@
             "type": "pickString",
             "description": "Select target architecture",
             "options": [
-                "x86_64-linux-gnu",
-                "x86_64-w64-mingw32"
+                "x86_64-linux-gnu"
             ],
             "default": "x86_64-linux-gnu"
+        },
+        {
+            "id": "SubProject",
+            "type": "pickString",
+            "description": "Select sub-project name",
+            "options": [
+                "HelloPoco"
+            ],
+            "default": "HelloPoco"
         }
     ]
 }

@@ -24,6 +24,10 @@ RUN apt update -y && apt install -y \
     gcc-mingw-w64-x86-64 \
     g++-mingw-w64-x86-64 
 
+# POCO dependencies
+RUN apt update -y && apt install -y \
+    libpoco-dev
+
 RUN locale-gen en_GB.UTF-8 && update-locale
 
 RUN useradd -m $USER && echo "$USER:$USER" | chpasswd && adduser $USER sudo

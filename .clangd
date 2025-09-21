@@ -1,5 +1,5 @@
 CompileFlags:
-  CompilationDatabase: build-x86_64-w64-mingw32
+  CompilationDatabase: build-x86_64-linux-gnu
   Add:
     - -isystem/workspaces/loopback_tests/build/_deps/spdlog-src/include
     - -isystem/workspaces/loopback_tests/build/_deps/entt-src/src

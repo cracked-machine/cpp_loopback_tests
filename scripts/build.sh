@@ -1,16 +1,18 @@
 #!/bin/bash
 BUILD=$1
 ARCH=$2
+SUBPROJECT=$3
 
 BUILD_DIR="build-${ARCH}"
 cmake -S . -B ${BUILD_DIR} -G Ninja \
     -DCMAKE_TOOLCHAIN_FILE=toolchain/cmake-${ARCH}.cmake \
     -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
     -DCMAKE_BUILD_TYPE=${BUILD} \
-    -DBUILD_ARCH=${ARCH}
+    -DBUILD_ARCH=${ARCH} \
+    -DSUBPROJECT=${SUBPROJECT} \
 
 cmake --build ${BUILD_DIR} --parallel
-chmod 777 ${BUILD_DIR}/bin/*
+# chmod 777 ${BUILD_DIR}/bin/*
 
 # update .clangd settings
 if [ -f ".clangd" ]; then
