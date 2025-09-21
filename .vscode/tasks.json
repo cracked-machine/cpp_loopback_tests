@@ -23,6 +23,16 @@
             "command": [
                 "find . -not -path './build/*' -regex '.*\\.\\(cpp\\|hpp\\|cc\\|cxx\\)' -exec clang-format -style=file -i {} \\;"
             ]
+        },
+        // call pythnon script to run all tests
+        {
+            "label": "Create test pcap file",
+            "type": "shell",
+            "command": [
+                "sudo python3 ./scripts/packets.py;",   // create packets and save to input.pcap
+                "tcpdump -vvr ./input.pcap;"            // verify the contents of input.pcap
+
+            ]
         }
     ],
     "inputs": [
@@ -52,9 +62,11 @@
             "type": "pickString",
             "description": "Select sub-project name",
             "options": [
-                "HelloPoco",
+                "HelloPOCO",
+                "LoopbackPOCO",
                 "HelloBoost",
-                "HelloAFXDP"
+                "HelloAFXDP",
+                "HelloDPDK"
             ],
             "default": "HelloPoco"
         }

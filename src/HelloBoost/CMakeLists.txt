@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
 set(TARGET "HelloBoost")
-project(${TARGET})
 
 set(CMAKE_CXX_STANDARD 17)
 

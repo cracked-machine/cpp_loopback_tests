@@ -17,7 +17,9 @@ RUN apt update -y && apt install -y \
     cmake \
     ninja-build \
     yq \
-    jq
+    jq \
+    python3-scapy \
+    tcpdump
 
 # optional cross compile to windows    
 RUN apt update -y && apt install -y \
@@ -35,6 +37,10 @@ RUN apt update -y && apt install -y \
 # AF_XDP dependencies
 RUN apt update -y && apt install -y \
     libbpf-dev libxdp-dev
+
+# DPDK dependencies
+RUN apt update -y && apt install -y \
+     dpdk dpdk-dev libnuma-dev
 
 RUN locale-gen en_GB.UTF-8 && update-locale
 
