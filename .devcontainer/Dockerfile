@@ -28,6 +28,10 @@ RUN apt update -y && apt install -y \
 RUN apt update -y && apt install -y \
     libpoco-dev
 
+# Boost dependencies
+RUN apt update -y && apt install -y \
+    libboost-all-dev
+
 RUN locale-gen en_GB.UTF-8 && update-locale
 
 RUN useradd -m $USER && echo "$USER:$USER" | chpasswd && adduser $USER sudo

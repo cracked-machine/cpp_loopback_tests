@@ -52,7 +52,8 @@
             "type": "pickString",
             "description": "Select sub-project name",
             "options": [
-                "HelloPoco"
+                "HelloPoco",
+                "HelloBoost"
             ],
             "default": "HelloPoco"
         }

@@ -6,5 +6,8 @@ message("PROJECT NAME: ${SUBPROJECT}")
 if(SUBPROJECT STREQUAL "HelloPoco")
     message(STATUS "Configuring HelloPoco project")
     add_subdirectory(src/HelloPoco)
+elseif(SUBPROJECT STREQUAL "HelloBoost")
+    message(STATUS "Configuring HelloBoost project")
+    add_subdirectory(src/HelloBoost)
 endif()
 
