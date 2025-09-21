@@ -32,6 +32,10 @@ RUN apt update -y && apt install -y \
 RUN apt update -y && apt install -y \
     libboost-all-dev
 
+# AF_XDP dependencies
+RUN apt update -y && apt install -y \
+    libbpf-dev libxdp-dev
+
 RUN locale-gen en_GB.UTF-8 && update-locale
 
 RUN useradd -m $USER && echo "$USER:$USER" | chpasswd && adduser $USER sudo

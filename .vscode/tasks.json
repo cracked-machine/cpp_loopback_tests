@@ -53,7 +53,8 @@
             "description": "Select sub-project name",
             "options": [
                 "HelloPoco",
-                "HelloBoost"
+                "HelloBoost",
+                "HelloAFXDP"
             ],
             "default": "HelloPoco"
         }

@@ -9,5 +9,8 @@ if(SUBPROJECT STREQUAL "HelloPoco")
 elseif(SUBPROJECT STREQUAL "HelloBoost")
     message(STATUS "Configuring HelloBoost project")
     add_subdirectory(src/HelloBoost)
+elseif(SUBPROJECT STREQUAL "HelloAFXDP")
+    message(STATUS "Configuring HelloAFXDP project")
+    add_subdirectory(src/HelloAFXDP)
 endif()
 
