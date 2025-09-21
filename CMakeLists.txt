@@ -27,9 +27,20 @@ elseif(SUBPROJECT STREQUAL "LoopbackAFXDP")
     message(STATUS "Configuring LoopbackAFXDP project")
     add_subdirectory(src/AFXDP/LoopbackAFXDP)
 
+elseif(SUBPROJECT STREQUAL "LoopbackAFXDP-RHEL9_6")
+    message(STATUS "Configuring LoopbackAFXDP-RHEL9_6 project")
+    add_subdirectory(src/AFXDP/LoopbackAFXDP-RHEL9_6)
+
 elseif(SUBPROJECT STREQUAL "HelloDPDK")
     message(STATUS "Configuring HelloDPDK project")
-    add_subdirectory(src/HelloDPDK)
+    add_subdirectory(src/DPDK/HelloDPDK)
 
+elseif(SUBPROJECT STREQUAL "LoopbackDPDK")
+    message(STATUS "Configuring LoopbackDPDK project")
+    add_subdirectory(src/DPDK/LoopbackDPDK)
+
+elseif(SUBPROJECT STREQUAL "LoopbackDPDK-RHEL9_6")
+    message(STATUS "Configuring LoopbackDPDK-RHEL9_6 project")
+    add_subdirectory(src/DPDK/LoopbackDPDK-RHEL9_6)
 endif()
 

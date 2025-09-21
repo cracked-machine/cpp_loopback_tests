@@ -47,7 +47,7 @@ sudo tcpdump -n -r <file.pcap> -U
     ./build-x86_64-linux-gnu/bin/LoopbackBoost --ingress input.pcap --egress eth1
     ```
 
-## Using AF_XDP Sockets
+## Using AF_XDP Sockets or DPDK
 
 This requires setup of Memlock limits and HugePages. Its a pain. Unless you need the extra performance I would use POCO/Boost instead.
 
