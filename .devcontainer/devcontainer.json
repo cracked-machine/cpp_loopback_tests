@@ -16,6 +16,14 @@
             ]
         }
     },
+    "runArgs": [
+        "--cap-add=NET_ADMIN",
+        "--cap-add=NET_RAW",
+        "--network=host",
+        "--privileged",
+        "--ulimit", "memlock=-1:-1",
+        "--tmpfs", "/sys/fs/bpf:rw,mode=777"
+    ],
     "remoteUser": "user",
     "containerUser": "user"
     

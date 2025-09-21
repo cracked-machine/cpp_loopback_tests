@@ -6,7 +6,7 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
-#include <xdp/xsk.h>
+#include <xdp/xsk.h> // Use bpf/xsk.h on fedora
 
 int main()
 {

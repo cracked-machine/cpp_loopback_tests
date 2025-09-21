@@ -19,7 +19,8 @@ RUN apt update -y && apt install -y \
     yq \
     jq \
     python3-scapy \
-    tcpdump
+    tcpdump \
+    iputils-ping
 
 # optional cross compile to windows    
 RUN apt update -y && apt install -y \
